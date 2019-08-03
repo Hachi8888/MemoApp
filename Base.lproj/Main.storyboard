@@ -18,28 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="SOT-JA-PZc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOT-JA-PZc">
                                 <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ3-Pc-bTI">
-                                <rect key="frame" x="0.0" y="12" width="320" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-rc-c8Y">
+                                <rect key="frame" x="0.0" y="20" width="320" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.90329767967776342" blue="0.73393821308617269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="削除"/>
+                                <connections>
+                                    <action selector="deletebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBl-4P-cqK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NJ3-Pc-bTI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="84h-L6-mBr"/>
-                            <constraint firstItem="NJ3-Pc-bTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ta-ee-DMf"/>
-                            <constraint firstItem="SOT-JA-PZc" firstAttribute="top" secondItem="NJ3-Pc-bTI" secondAttribute="bottom" id="NQO-6F-ut4"/>
-                            <constraint firstItem="SOT-JA-PZc" firstAttribute="top" secondItem="NJ3-Pc-bTI" secondAttribute="bottom" constant="5" id="aEw-Ni-R11"/>
-                            <constraint firstItem="SOT-JA-PZc" firstAttribute="top" secondItem="NJ3-Pc-bTI" secondAttribute="bottom" id="cbr-Pq-1lC"/>
+                            <constraint firstItem="Sd5-rc-c8Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3G4-MJ-7vC"/>
+                            <constraint firstItem="Sd5-rc-c8Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Uw-Uo-uZh"/>
+                            <constraint firstItem="SOT-JA-PZc" firstAttribute="top" secondItem="Sd5-rc-c8Y" secondAttribute="bottom" id="Ih2-BJ-bZ5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SOT-JA-PZc" secondAttribute="bottom" id="cgx-1d-XhN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sd5-rc-c8Y" secondAttribute="trailing" id="fBH-6D-Gcn"/>
                             <constraint firstItem="SOT-JA-PZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lw5-8u-Y0f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SOT-JA-PZc" secondAttribute="trailing" id="pDh-BC-zYc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJ3-Pc-bTI" secondAttribute="trailing" id="yMU-q9-VkR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
