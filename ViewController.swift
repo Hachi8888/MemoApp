@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITextViewDelegate{
+class ViewController: UIViewController, UITextViewDelegate {
      // ★スラッシュ2本のあとは半角スペースを空ける
      // ★スラッシュ3本+optionキーでtextViewを選択するとドキュメントコメントに反映される ↓
     ///メモ2
@@ -26,15 +26,19 @@ class ViewController: UIViewController , UITextViewDelegate{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         // AppDelegateに定義したlastTextを参照し、textViewに格納する。
         textView.text = appDelegate.lastText
+    }
         
-        func textViewDidChange(_ textView:UITextView) {
-            // AppDelegateを呼び出して変数に格納します。
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            
-            //AppDelegateに記述した"lastText"に入力されている内容を格納します
-            appDelegate.lastText = textView.text
-        }
-
+    @IBAction func deletebutton(_ sender: UIButton) {
+        textView.text = ""
+    }
+    
+    func textViewDidChange(_ textView:UITextView) {
+        // AppDelegateを呼び出して変数に格納します。
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        //AppDelegateに記述した"lastText"に入力されている内容を格納します
+        appDelegate.lastText = textView.text
+        
     }
 
 
